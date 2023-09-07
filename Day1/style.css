@@ -78,6 +78,10 @@ body {
         height: 80vh;
     }
 
+    .image.active span {
+        transition: opacity 0.3s ease-in 0.65s;
+    }
+
     .image:nth-of-type(4),
     .image:nth-of-type(5) {
         display: none;
