@@ -98,6 +98,7 @@ body {
 #main__btn-group__btn-next:disabled {
     background-color: grey;
     cursor: not-allowed;
+    color: gainsboro;
 }
 
 
