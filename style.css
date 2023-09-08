@@ -1,22 +1,29 @@
-body{
+@import url('https://fonts.googleapis.com/css2?family=Mali:wght@200&display=swap');
+
+
+body {
+    font-family: 'Mali', cursive;
     height: 100vh;
     width: 100vw;
-    display: flex;justify-content: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #222831;
+    color: #DBE2EF;
 }
 
-.main__container{
-    padding: 20px 40px;
+.main__container {
+    padding: 20px 20px 40px 20px;
     border-radius: 20px;
     border: 1px solid;
     height: fit-content;
-
 }
 
-.main__container-title{
+.main__container-title {
     text-align: center;
 }
 
-.main__container-list{
+.main__container-list {
     width: 100%;
 }
 
@@ -27,12 +34,14 @@ body{
     text-align: center;
     text-decoration: none;
     border-radius: 8px;
-
+    color: #08D9D6;
 }
-.main__container-list a:hover{
+
+.main__container-list a:hover {
     background-color: #83ecef;
     color: #e56630;
 }
-.main__container-list a:not(:first-child){
+
+.main__container-list a:not(:first-child) {
     margin-top: 8px;
 }

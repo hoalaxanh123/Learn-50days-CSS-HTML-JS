@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Mali:wght@200&display=swap');
+
+
+:root {
+    --progressbar-percent-width: 50%;
+}
+
+
+body {
+    font-family: 'Mali', cursive;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-size: 22px;
+}
+
+.main {
+    width: 500px;
+}
+
+.main__stepper__step,
+.main__btn-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.main__stepper {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    width: 500px;
+    z-index: 0;
+    margin: 16px 0;
+}
+
+#main__stepper__progress,
+#main__stepper__progress::before {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    height: 4px;
+    transition: width 0.2s linear;
+}
+
+#main__stepper__progress {
+    width: 100%;
+    background-color: grey;
+    z-index: -2;
+}
+
+#main__stepper__progress::before {
+    content: '';
+    background-color: deepskyblue;
+    width: var(--progressbar-percent-width);
+    z-index: -1;
+}
+
+.main__stepper__step {
+    background-color: white;
+    border-radius: 50%;
+    height: 35px;
+    width: 35px;
+    border: 3px solid transparent;
+    color: black;
+    cursor: pointer;
+    transition: border-top-color 0.7s, border-left-color 0.4s, border-right-color 0.8s, border-bottom-color 0.7s;
+}
+
+.main__stepper__step.active {
+    border: 3px solid deepskyblue;
+}
+
+#main__btn-group__btn-prev,
+#main__btn-group__btn-next {
+    font-size: 18px;
+    padding: 8px 24px;
+    margin: 0 8px;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    background-color: cadetblue;
+    transition: background-color .5s linear;
+    cursor: pointer;
+}
+
+#main__btn-group__btn-prev:disabled,
+#main__btn-group__btn-next:disabled {
+    background-color: grey;
+    cursor: not-allowed;
+}
+
+
+#main__btn-group__btn-prev:active,
+#main__btn-group__btn-next:active {
+    transform: scale(105%);
+    outline: none;
+}
+
+.main_content {
+    border: 1px solid gainsboro;
+    padding: 12px;
+    margin: 16px 0 24px 0;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.main__title {
+    text-align: center;
+}
