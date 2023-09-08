@@ -16,7 +16,11 @@ body {
 }
 
 .main {
-    width: 500px;
+    width: 100%;
+    max-width: 500px;
+    border: 1px solid gainsboro;
+    padding: 30px;
+    border-radius: 10px;
 }
 
 .main__stepper__step,
@@ -32,7 +36,6 @@ body {
     position: relative;
     justify-content: space-between;
     align-items: center;
-    width: 500px;
     z-index: 0;
     margin: 16px 0;
 }
