@@ -91,6 +91,7 @@ body {
     background-color: cadetblue;
     transition: background-color .5s linear;
     cursor: pointer;
+    color: white;
 }
 
 #main__btn-group__btn-prev:disabled,
