@@ -17,11 +17,11 @@ body {
 
 .container {
     width: 90%;
+    height: 80vh;
     display: flex;
 }
 
 .image {
-    height: 80vh;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
