@@ -36,5 +36,5 @@ body {
 }
 
 .item:not(:first-child) {
-    margin-top: 20px;
+    margin-top: 18px;
 }
