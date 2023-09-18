@@ -6,7 +6,7 @@ for (let i = 0; i < 200; i++) {
 const handleScroll = () => {
     for (const item of items) {
         const bounding = item.getBoundingClientRect()
-        const checkpoint = window.innerHeight / 4 * 3
+        const checkpoint = window.innerHeight / 5 * 4
         if (bounding.top < checkpoint) {
             item.classList.add('active')
         } else {
