@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Mali:wght@300&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Mali', cursive;
+
+    background-image: linear-gradient(to right bottom, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+
+    /*background: rgb(2,0,36);*/
+    /*background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(9,47,121,1) 29%, rgba(0,212,255,1) 100%);*/
+}
+
+input {
+    font-size: 25px;
+    font-family: inherit;
+    border-radius: 10px;
+    padding: 8px 10px;
+}
+
+label.active span {
+    transform: translateY(-40px);
+}
+
+label span {
+    transition: all 0.5s ease-in-out;
+    display: inline-block;
+    transform: translateY(0);
+    animation-iteration-count: infinite;
+}
+
+label {
+    display: block;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.input-field:not(:first-child) {
+    margin-top: 15px;
+}
+
+.input-field {
+    position: relative;
+    transition: margin-top 0.5s linear;
+}
+
+.input-field label {
+    position: absolute;
+}
+
+.input-field input {
+    opacity: 0;
+    transition: opacity 0.5s linear;
+}
+
+.input-field:has(.active) {
+    margin-top: 45px;
+}
+
+.input-field:has(.active) input {
+    opacity: 1;
+}
+
+.main {
+    min-width: min-content;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid;
+    color: white;
+}
+
+.title {
+    text-align: center;
+    font-weight: bold;
+}
+
+.other {
+    font-size: 15px;
+    margin-top: 20px;
+}
+
+a {
+    color: greenyellow;
+    text-decoration: none;
+}
+.btn-group{
+    text-align: center;
+    margin-top: 30px;
+}
+.login-btn {
+    padding: 10px 50px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    width: 100%;
+}
+
+.login-btn:active{
+    color: #2e6920;
+    border-color:#72f14d;
+}

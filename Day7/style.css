@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.96);
+    display: flex;
+}
+
+.left,
+.right {
+    height: calc(100% - 2px);
+    width: 100%;
+    position: relative;
+    color: white;
+    transition: width 0.5s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left h1,
+.right h1 {
+    border: 1px solid white;
+    border-radius: 45px;
+    padding: 10px 20px;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.left:hover h1,
+.right:hover h1 {
+    opacity: 1;
+    transition: opacity 0.5s linear;
+    z-index: 1;
+}
+
+.left h1:hover,
+.right h1:hover {
+    filter: drop-shadow(2px 2px 2px #fff4f4);
+}
+
+.left h1:hover {
+    filter: drop-shadow(2px 2px 2px #2ff8a5);
+}
+
+.right h1:hover {
+    filter: drop-shadow(4px 4px 4px rgba(21, 2, 2, 0.96));
+}
+
+.right.active h1,
+.left.active h1 {
+    opacity: 0;
+}
+
+.right::before,
+.left::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.58);
+    content: "";
+    transition: all 0.3s linear;
+}
+
+.left {
+    background: url("https://images.unsplash.com/photo-1621259182978-fbf93132d53d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1932&q=80") no-repeat center;
+}
+
+.right {
+    background: url("https://images.unsplash.com/photo-1507457379470-08b800bebc67?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2109&q=80") no-repeat center;
+}
+
+.right::before {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.left:hover::before,
+.right:hover::before {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.left.active::before,
+.right.active::before {
+    background-color: unset;
+}
+
+
+.back{
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 2;
+    filter: invert(100%);
+    cursor: pointer;
+    opacity: 0;
+    transition: all 0.5s linear;
+}
