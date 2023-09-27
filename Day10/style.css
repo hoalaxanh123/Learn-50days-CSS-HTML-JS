@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Mali:wght@300&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Mali', cursive;
+    background-image: linear-gradient(to right top, #051937, #004e7e, #008aa9, #00c7a4, #41ff72);
+    color: white;
+}
+
+.container {
+    background-color: rgba(224, 210, 210, 0.3);
+    padding: 40px;
+    text-align: center;
+    border-radius: 12px;
+    max-width: 70%;
+}
+
+.title {
+    font-size: 18px;
+}
+
+.content {
+    padding: 32px 0;
+}
+
+.get-new-joke-btn {
+    font-size: 20px;
+    border: 1px solid;
+    border-radius: 4px;
+    width: fit-content;
+    padding: 2px 8px;
+    display: initial;
+    cursor: pointer;
+}
+
+.get-new-joke-btn:hover {
+    opacity: 0.8;
+}
+
+.get-new-joke-btn:active {
+    outline: 1px solid;
+    outline-offset: 2px;
+}
+
+.get-new-joke-btn.loading{
+    border-radius: 50%;
+    opacity: 0;
+}
+.get-new-joke-btn.disabled {
+    cursor: not-allowed;
+    color: #ad9696;
+}
+
+.lds-dual-ring {
+    display: none;
+    /*display: inline-block;*/
+    width: 30px;
+    height: 30px;
+}
+
+.lds-dual-ring:after {
+    content: " ";
+    display: block;
+    width: 18px;
+    height: 18px;
+    margin: 8px;
+    border-radius: 50%;
+    border: 6px solid #fff;
+    border-color: #fff transparent #fff transparent;
+    animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
