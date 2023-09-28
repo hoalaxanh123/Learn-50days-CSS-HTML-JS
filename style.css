@@ -21,6 +21,12 @@ body {
     overflow: auto;
 }
 
+a{
+    color: yellow;
+    text-decoration: none;
+    padding: 4px 16px;
+}
+
 .main__container-title {
     text-align: center;
 }
