@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Mali:wght@500&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    height: 100vh;
+    font-family: 'Mali', cursive;
+    background-image: linear-gradient(
+            to bottom,
+            #eafbff 0%, #eafbff 50%,
+            #5290f9 50%, #5290f9 100%
+    );
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+@keyframes rotate-animation {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.container {
+    text-align: center;
+    border: 1px solid;
+    padding: 18px 25px;
+    border-radius: 8px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: fit-content;
+    
+
+    .menu-btn {
+        color: black;
+        position: relative;
+        cursor: pointer;
+        height: 36px;
+        width: 36px;
+
+        .line {
+            position: absolute;
+            left: 3px;
+            height: 4px;
+            width: 30px;
+            background-color: #5290f9;
+            transition: all 0.6s ease-in-out;
+        }
+
+        .line-1 {
+            top: 30%;
+        }
+
+        .line-2 {
+            top: 60%;
+        }
+
+        &.active {
+            .line {
+                top: 15px;
+            }
+
+            .line-1 {
+                transform: rotate(585deg) scaleY(-1);
+            }
+
+            .line-2 {
+                transform: rotate(-585deg) scaleY(-1);
+            }
+
+            margin-left: 16px;
+        }
+
+        &:hover {
+            color: -webkit-link;
+            font-weight: bold;
+        }
+    }
+
+
+    & ul {
+        list-style-type: none;
+    }
+
+    .nav {
+        display: flex;
+        flex-direction: row;
+        width: 0;
+        opacity: 0;
+        overflow: hidden;
+        transition: all 0.5s linear;
+
+        &.active {
+            opacity: 1;
+            width: 340px;
+            overflow: initial;
+
+            & li {
+                transform: rotateY(360deg);
+            }
+        }
+
+        & li a {
+            text-decoration: unset;
+            padding: 4px 8px;
+            margin: 0 4px;
+            color: black;
+
+            &:hover {
+                color: -webkit-link;
+                font-weight: bold;
+            }
+        }
+
+        & li {
+            transform: rotateY(0deg);
+            transition: transform 0.5s linear;
+        }
+
+    }
+}
+
+

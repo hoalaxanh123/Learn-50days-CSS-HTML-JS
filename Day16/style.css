@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Mali:wght@500&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    height: 100vh;
+    font-family: 'Mali', cursive;
+    background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 16px;
+}
+
+
+.container {
+    text-align: center;
+    border: 1px solid;
+    padding: 18px 25px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: fit-content;
+
+    .result {
+        border: 1px solid;
+        border-radius: 0 0 20px 20px;
+        height: 200px;
+        overflow: hidden;
+        margin: 32px 0;
+        min-width: 90px;
+
+        .remained,
+        .drank {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 0 8px;
+            overflow: hidden;
+            transition: height 0.5s linear;
+            font-size: 1.1rem;
+
+            & *{
+                transition: height 0.5s linear;
+                font-size: 1.1rem;
+            }
+        }
+
+        .remained {
+            height: 20%;
+            background: blue;
+        }
+
+        .drank {
+            background-color: #00eaff;
+            height: 0;
+            overflow: hidden;
+        }
+
+    }
+
+    .selector-title {
+        margin: 8px 0;
+    }
+
+    .selector {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: 350px;
+
+        .line {
+            margin-top: 8px;
+            display: flex;
+
+            .glass {
+                padding: 12px 8px;
+                margin: 12px;
+                border: 1px solid;
+                border-radius: 0 0 12px 12px;
+                cursor: pointer;
+                
+                &:hover{
+                    outline: 1px solid;
+                    outline-offset: 2px;
+                }
+                
+                &:active{
+                    font-weight: bold;
+                }
+                &.drank{
+                    background-color: #00eaff;
+                    color: black;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .container {
+        flex-direction: column;
+    }
+}

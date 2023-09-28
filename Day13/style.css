@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Mali:wght@300&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    height: 100vh;
+    font-family: 'Mali', cursive;
+    background-image: linear-gradient(to right top, #051937, #004e7e, #008aa9, #00c7a4, #41ff72);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+@keyframes rotate-animation {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.container {
+    text-align: center;
+    border: 1px solid;
+    padding: 30px;
+    border-radius: 12px;
+
+
+    .input {
+        margin-top: 20px;
+        width: 100%;
+        font-size: 1.2rem;
+
+        &:focus-visible {
+            outline-color: rgba(65, 220, 255, 0.79);
+        }
+    }
+
+    .tag-container {
+        margin-top: 8px;
+        display: flex;
+        flex-direction: row;
+
+        .tag {
+            background-color: rgba(234, 227, 100, 1);
+            padding: 4px 24px;
+            margin: 4px;
+            border-radius: 20px;
+            color: black;
+            transition: all 0.5s linear;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &.active {
+                background: black;
+                color: white;
+            }
+        }
+    }
+
+    .status {
+        opacity: 0;
+        max-height: 0;
+        overflow: hidden;
+        margin-top: 8px;
+        transition: all 0.5s ease-in-out;
+
+
+        &.active {
+            opacity: 1;
+            max-height: fit-content;
+
+            .spinner {
+                margin-top: 5px;
+                animation: rotate-animation 1s infinite linear;
+            }
+        }
+    }
+}
+

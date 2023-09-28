@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Mali:wght@300&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Mali', cursive;
+    background-image: linear-gradient(to right top, #051937, #004e7e, #008aa9, #00c7a4, #41ff72);
+    color: white;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.toggle-btn {
+    position: absolute;
+    right: 15px;
+    top: 26px;
+    cursor: pointer;
+    transition: transform 0.3s linear;
+}
+
+.collapsable .activator {
+    padding-right: 35px;
+    cursor: pointer;
+}
+.collapsable .content{
+    transition: all 0.2s ease-out;
+    font-weight: bold;
+}
+.collapsable.expanded .content {
+    margin-top: 32px;
+}
+.collapsable{
+    box-shadow: 10px 10px 5px -2px rgba(0,0,0,0.19);
+    -webkit-box-shadow: 10px 10px 5px -2px rgba(0,0,0,0.19);
+    -moz-box-shadow: 10px 10px 5px -2px rgba(0,0,0,0.19);
+}
+
+.collapsable {
+    border: 1px solid;
+    padding: 20px;
+    border-radius: 8px;
+    position: relative;
+    width: 500px;
+    word-break: break-all;
+    transition: background-color 0.5s linear;
+
+    &.collapsed {
+        .content {
+            max-height: 0;
+            overflow: hidden;
+        }
+    }
+
+    &.expanded {
+        background-color: rgba(106, 228, 232, 0.18);
+        background-image: url("chat.png");
+        background-position: 10%;
+        background-size: 50px;
+        background-repeat: no-repeat;
+        
+        .toggle-btn {
+            -webkit-transform: scaleY(-1);
+            transform: scaleY(-1);
+        }
+
+        .content {
+            max-height: fit-content;
+        }
+    }
+}
+
+.collapsable:not(:first-child) {
+    margin-top: 15px;
+}
+
+@media only screen and (max-width: 600px) {
+    .collapsable {
+        width: 80vw;
+        
+     
+    }
+    .title{
+        text-align: center;
+    }
+}
+
