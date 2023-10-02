@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Mali:wght@500&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    color: white;
+    font-family: 'Mali', cursive;
+    z-index: 0;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.65);
+    z-index: 1;
+}
+
+body,
+.main {
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: background 0.4s linear;
+    background-position: center center;
+}
+
+.main {
+    z-index: 3;
+    height: 70vh;
+    width: 70vw;
+    position: relative;
+    overflow: hidden;
+
+    .slide {
+        height: 100vh;
+        width: 100vw;
+        background-position: center center;
+        background-size: cover;
+        position: absolute;
+        top: -15vh;
+        left: -15vw;
+        transition: 0.4s ease;
+        z-index: 5;
+    }
+}
+
+.prev_btn,
+.next_btn,
+.auto_btn {
+    position: fixed;
+    padding: 8px;
+    cursor: pointer;
+    border: 1px solid yellow;
+    z-index: 50;
+
+    &:hover {
+        font-weight: bold;
+        color: #5290f9;
+    }
+}
+
+.prev_btn,
+.next_btn {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.prev_btn {
+    left: calc(15vw - 62px);
+}
+
+.next_btn {
+    right: calc(15vw - 62px);
+}
+
+.auto_btn {
+    bottom: calc(15vh - 43px);
+    left: 50%;
+    transform: translateX(-50%);
+}

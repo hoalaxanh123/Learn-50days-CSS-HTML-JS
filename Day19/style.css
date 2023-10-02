@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Mali:wght@300&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-size: 1.2rem;
+    font-family: 'Mali', cursive;
+}
+
+body,
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    height: 100vh;
+    transition: background-color 0.4s ease-in, color 0.4s ease-in;
+
+    &.dark-mode {
+        background-color: #333;
+        
+        &,
+        & * {
+            color: white;
+        }
+
+        & button {
+            background-color: rgba(255, 255, 255, 0.07);
+        }
+
+        .main .clock {
+            .hour {
+                background-color: white;
+            }
+
+            .minute {
+                background-color: rgba(246, 236, 148, 0.91);
+            }
+        }
+    }
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+    background-color: #000;
+    color: #fff;
+    border: 0;
+    border-radius: 4px;
+    padding: 8px 12px;
+    font-size: 0.8rem;
+}
+
+.main {
+    flex-direction: column;
+    padding: 30px;
+
+    .clock {
+        padding: 50px;
+        position: relative;
+        width: 200px;
+        height: 200px;
+
+        .needle {
+            background-color: #000;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            height: 65px;
+            width: 3px;
+            transform-origin: bottom center;
+            transition: transform 0.5s ease-in;
+        }
+
+        .needle.hour {
+            transform: translate(-50%, -100%) rotate(0deg);
+            background-color: #000;
+        }
+
+        .needle.minute {
+            transform: translate(-50%, -100%) rotate(10deg);
+            height: 100px;
+            background-color: rgba(68, 59, 59, 0.78);
+        }
+
+        .needle.second {
+            transform: translate(-50%, -100%) rotate(20deg);
+            height: 100px;
+            background-color: #e74c3c;
+        }
+
+        .center-point {
+            background-color: #e74c3c;
+            width: 10px;
+            height: 10px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+        }
+
+        .center-point::after {
+            content: '';
+            background-color: #e74c3c;
+            width: 5px;
+            height: 5px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+        }
+    }
+
+    .digital-clock {
+        font-size: 3rem;
+    }
+
+    .date {
+        color: #aaa;
+    }
+
+
+}
