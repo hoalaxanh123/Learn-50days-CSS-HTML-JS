@@ -14,17 +14,23 @@ body {
 }
 
 .main__container {
-    padding: 20px 20px 40px 20px;
+    padding: 20px;
     border-radius: 20px;
     border: 1px solid;
     height: 100vh;
-    overflow: auto;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+h1,
+h3 {
+    margin: 8px 0;
 }
 
 a{
     color: yellow;
     text-decoration: none;
-    padding: 4px 16px;
+    padding: 0 16px;
 }
 
 .main__container-title {
@@ -33,17 +39,17 @@ a{
 
 .main__container-list {
     width: 100%;
-
 }
 
 .main__container-list a {
     border: 1px solid;
-    padding: 4px 20px;
+    padding: 2px 20px;
     display: block;
     text-align: center;
     text-decoration: none;
     border-radius: 8px;
     color: #08D9D6;
+    overflow-y: auto;
 }
 
 .main__container-list a:hover {
@@ -53,4 +59,23 @@ a{
 
 .main__container-list a:not(:first-child) {
     margin-top: 8px;
+}
+
+
+::-webkit-scrollbar-track {
+    display: none;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar {
+   display: none;
+}
+
+::-webkit-scrollbar-thumb {
+    display: none;
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+    background-color: #555;
 }
