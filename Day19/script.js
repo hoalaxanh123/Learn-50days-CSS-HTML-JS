@@ -1,11 +1,18 @@
-const switchModeBtn = document.querySelector('.switch_mode button')
+const switchModeContainer = document.querySelector('.switch_mode')
+const switchModeOnBtn = document.querySelector('.switch_mode--on')
+const switchModeOffBtn = document.querySelector('.switch_mode--off')
 const digitalClockEl = document.querySelector('.digital-clock')
 const analogClockEl = document.querySelector('.clock')
 const hourEl = analogClockEl.querySelector('.hour')
 const minuteEl = analogClockEl.querySelector('.minute')
 const secondEl = analogClockEl.querySelector('.second')
 const dateEl = document.querySelector('.date')
-switchModeBtn.addEventListener('click', () => {
+switchModeOnBtn.addEventListener('click', () => {
+    switchModeContainer.classList.toggle('active')
+    document.body.classList.toggle('dark-mode')
+})
+switchModeOffBtn.addEventListener('click', () => {
+    switchModeContainer.classList.toggle('active')
     document.body.classList.toggle('dark-mode')
 })
 

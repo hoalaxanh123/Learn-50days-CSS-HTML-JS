@@ -123,5 +123,49 @@ button {
         color: #aaa;
     }
 
+    .switch_mode {
+        position: relative;
+        text-align: center;
+        transition: transform 0.5s ease-in;
+        display: flex;
+        width: 55px;
+        height: 55px;
+        overflow: hidden;
+        border-radius: 50%;
+
+        .switch_mode--on,
+        .switch_mode--off {
+            background-color: transparent;
+            position: absolute;
+        }
+
+        .switch_mode--on {
+            
+            transition: all 0.3s ease-in;
+            left: -9px;
+            top: -5px;
+        }
+
+        .switch_mode--off {
+            top: -2px;
+            transition: all 0.3s ease-in;
+            right: -60px;
+        }
+
+        &.active {
+
+            .switch_mode--on {
+                left: -60px;
+                rotate: -360deg;
+            }
+
+            .switch_mode--off {
+                rotate: -360deg;
+                right: 0;
+            }
+
+        }
+    }
+
 
 }
