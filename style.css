@@ -50,12 +50,14 @@ a {
     border-radius: 8px;
     color: #08D9D6;
     overflow-y: auto;
+    transition: background-color 0.3s ease-out;
 }
 
 .main__container-list a:hover {
     background-color: #83ecef;
     color: #000000;
     font-weight: bold;
+    font-size: 20px;
 }
 
 .main__container-list a:not(:first-child) {
