@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Mali:wght@500&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-size: 1.2rem;
+    color: white;
+    font-family: 'Mali', cursive;
+    background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.item {
+    height: 100px;
+    width: 100px;
+    border: 1px solid;
+
+
+    &.selected {
+        background-image: url("https://images.unsplash.com/photo-1697329371198-74d8c6de188a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        border-color: #08D9D6;
+    }
+
+    &.hover {
+        border: 1px dashed;
+    }
+
+    &.not-allow {
+        border-color: #ff8055;
+        font-size: 16px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #ff8055;
+        cursor: not-allowed;
+    }
+}
+
+.item:not(:first-child) {
+    margin-top: 12px;
+}
