@@ -4,7 +4,11 @@ let selectedIdx = 0
 for (let i = 0; i < items.length; i++) {
     const item = items[i]
     const eventTypes = ['dragstart', 'dragenter', 'dragover', 'dragleave', 'drop', 'dragend']
-
+    item.addEventListener('dragstart', (e) => {
+        if (!e.target.classList.contains('selected')) {
+            event.preventDefault();
+        }
+    })
     item.addEventListener('dragover', (e) => {
         event.preventDefault();
         e.target.classList.add('hover')
