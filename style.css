@@ -27,7 +27,7 @@ h3 {
     margin: 8px 0;
 }
 
-a{
+a {
     color: yellow;
     text-decoration: none;
     padding: 0 16px;
@@ -54,7 +54,8 @@ a{
 
 .main__container-list a:hover {
     background-color: #83ecef;
-    color: #e56630;
+    color: #000000;
+    font-weight: bold;
 }
 
 .main__container-list a:not(:first-child) {
@@ -70,7 +71,7 @@ a{
 }
 
 ::-webkit-scrollbar {
-   display: none;
+    display: none;
 }
 
 ::-webkit-scrollbar-thumb {
