@@ -24,38 +24,38 @@ body {
 .content {
     text-align: center;
 
-
     & button {
         padding: 50px 100px;
         margin-top: 20px;
-        border-radius: 16px;
         box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
         -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
         -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
         transition: all 0.1s linear;
         cursor: pointer;
         position: relative;
-
-        &:active {
-            box-shadow: 22px 15px 27px -12px rgba(0, 0, 0, 0.43);
-            -webkit-box-shadow: 22px 15px 27px -12px rgba(0, 0, 0, 0.43);
-            -moz-box-shadow: 22px 15px 27px -12px rgba(0, 0, 0, 0.43);
-
-            &::before {
-                transform: scale(2);
-            }
-        }
-
-        &::before {
+        overflow: hidden;
+        background: purple;
+        color: white;
+        border: 1px solid purple;
+ 
+        .circle {
             content: "";
             position: absolute;
-            background: red;
-            left: 0;
-            top: 0;
-            width: 80px;
-            height: 80px;
+            background: #fff;
+            width: 10px;
+            height: 10px;
             border-radius: 50%;
+            transform: translate(-50%, -50%) scale(0);
             transition: transform 0.1s linear;
+            animation: scale 0.5s ease-out;
+            overflow: hidden;
         }
+    }
+}
+
+@keyframes scale {
+    to {
+        transform: translate(-50%, -50%) scale(40);
+        opacity: 0;
     }
 }
